@@ -45,21 +45,24 @@ nav a {
 
 #homehero {
     background-image: url(utahtechimages/homehero.jpg);
-    background-size: cover, no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     height: 300px;
 }
 
 #studenthero {
     background-image: url(utahtechimages/studenthero.jpg);
-    background-size: cover, no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     height: 300px;
 }
 
 #facultyhero {
     background-image: url(utahtechimages/facultyhero.jpg);
-    background-size: cover, no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     height: 300px;
 }
