@@ -1,0 +1,40 @@
+#wrapper {
+     display: grid;
+    grid-auto-rows: minmax(0, auto);
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 200px)) minmax(0px, 1fr);
+}
+
+header {
+    height: 12vh;
+    background-color: #662d91;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+nav {
+    height: 3vh;
+    background-color: #d1d3d4;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+}
+
+.hero {
+    height: 80vh;
+    background-color: #f498c0;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
+main {
+    height: 180vh;
+    background-color: #f9ed32;
+    grid-row: 4 / 5;
+    grid-column: 2 / -2;
+}
+
+footer {
+    height: 22vh;
+    background-color: #662d91;
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+}
