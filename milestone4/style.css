@@ -21,17 +21,22 @@ header h1 {
     padding: 1rem 0em;
     font-size: 450%;
     color: #f498c0;
-    background-image: url(websitehomepictures/mywebsitelogo.png);
+    background-image: url(images/mywebsitelogo.png);
     background-repeat: no-repeat;
     background-position: right center;
     padding-left: 1em;
+    padding-right: .5em;
     background-origin: content-box;
     margin: 0;
+    background-size: 17vh;
 }
 
+/*
 .logo {
-    width: 20px;
+    height: 12vh;
+    width: 12vh;
 }
+*/
 
 nav {
     position: sticky;
@@ -71,7 +76,7 @@ nav ul li {
 .hero {
     height: 80vh;
     width: 100%;
-    background-image: url(websitehomepictures/herowebsitepicture.jpg);
+    background-image: url(images/herowebsitepicture.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     grid-row: 3 / 4;
@@ -79,7 +84,7 @@ nav ul li {
 }
 
 main {
-    height: 130vh;
+    height: 155vh;
     grid-row: 4 / 5;
     grid-column: 2 / -2;
 }
@@ -113,28 +118,63 @@ hr {
     clear: both;
 }
 
-.column1 {
+.artwork1,
+.artwork2,
+.artwork3,
+.artwork4 {
     float: left;
     width: 50%;
     padding: 1rem 0em;
+    height: 50vh;
 }
 
-.column2 {
-    float: left;
-    width: 50%;
-    padding: 1rem 0em;
+.artwork1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 100px;
 }
 
-.column3 {
-    float: left;
-    width: 50%;
-    padding: 1rem 0em;
+.artwork2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 100px;
 }
 
-.column4 {
-    float: left;
-    width: 50%;
-    padding: 1rem 0em;
+.artwork3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.artwork4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+figure {
+    width: 450px;
+    margin: 0 auto;
+}
+
+figcaption {
+    background-color: #d1d3d4;
+    font-size: 1.3rem;
+    color: black;
+    padding: .6em;
+}
+
+figcaption span {
+    background-color: #d1d3d4;
+    font-size: 2rem;
+    color: black;
+    padding: .2em;
+}
+
+.clear a {
+    margin: 0 auto;
+    text-decoration: none;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
 }
 
 footer {
