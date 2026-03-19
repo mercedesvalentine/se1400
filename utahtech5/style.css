@@ -194,4 +194,27 @@ main img {
         grid-column: 5 / 8;
         height: auto;
     }
+
+    main img {
+        float: none;
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header h1 {
+        background-image: none;
+        text-align: center;
+    }
+
+    nav {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+    }
+
+    #homehero, #studenthero, #facultyhero {
+        display: none;
+    }
 }
