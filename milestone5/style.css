@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 #wrapper {
@@ -22,6 +21,8 @@ header {
     background-origin: content-box;
     margin: 0;
     background-size: 17vh;
+    display: flex;
+    align-items: center;
 }
 
 .sitename {
@@ -70,7 +71,7 @@ nav ul li {
     background-image: url(images/herowebsitepicture.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /*background-position: center;*/
+    background-position: center;
     grid-row: 3 / 4;
     grid-column: 1 / -1;
 }
@@ -117,19 +118,17 @@ hr {
     float: left;
     width: 50%;
     padding: 1rem 0em;
-    height: 50vh;
+    height: 100%;
 }
 
 .artwork1 {
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 100px;
 }
 
 .artwork2 {
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 100px;
 }
 
 .artwork3 {
@@ -161,7 +160,7 @@ figcaption span {
     padding: .2em;
 }
 
-.clear a {
+figure a {
     margin: 0 auto;
     text-decoration: none;
     display: block;
@@ -169,36 +168,79 @@ figcaption span {
     text-align: left;
 }
 
+
 footer {
-    height: 15vh;
     background-color: #262262;
     grid-row: 5 / 6;
     grid-column: 1 / -1;
     font-size: 1.2rem;
     text-align: center;
-    padding: 1rem 0em;
+    padding: 4rem 0rem 1rem 0rem;
     color: #f498c0;
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 }
 
-/*@media only screen and (max-width: 1835px) {
-    #wrapper {
-        grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 150px)) minmax(0px, 1fr);
+@media only screen and (max-width: 1410px) {
+    nav {
+        grid-column: 5 / -1;
+        grid-row: 2 / 4;
+        position: static;
+        width: 100%;
+        height: auto;
     }
-}*/
 
-@media only screen and (max-width: 1835px) {
-    #wrapper header{
-        display: flex;
-        align-items: center;
+    nav a {
+        width: 100%;
+    }
+
+    nav ul {
+        margin: 0;
+        flex-flow: column nowrap;
+    }
+
+    .hero {
+        grid-row: 2 / 4;
+        grid-column: 1 / 5;
+        height: auto;
+        width: 100%;
+    }
+
+    /* This solved the footer problem that was caused by setting a specific height for the main element in the general styles above */
+    main {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    hr {
+        width: 95%
     }
 }
 
-@media only screen and (max-width: 892px) {
-    #wrapper header img {
-        background-image: none;
+@media only screen and (max-width: 925px) {
+
+    .artwork1,
+    .artwork2,
+    .artwork3,
+    .artwork4 {
+        width: 100%;
+        padding: 1rem 0em;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    #wrapper header {
+        background-position: center;
+    }
+
+    #wrapper header .sitename {
+        display: none;
+    }
+
+    nav {
+        grid-column: 1 / -1;
+    }
+
+    .hero {
+        display: none;
     }
 }
