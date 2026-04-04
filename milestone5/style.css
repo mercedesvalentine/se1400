@@ -244,3 +244,66 @@ footer {
         display: none;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .clear {
+        clear: both;
+    }
+
+    .artwork1,
+    .artwork2,
+    .artwork3,
+    .artwork4 {
+        float: left;
+        width: 100%;
+        padding: 1rem 0em;
+        height: 100%;
+    }
+
+    .artwork1 {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .artwork2 {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .artwork3 {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .artwork4 {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    figure {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    figcaption {
+        background-color: #d1d3d4;
+        font-size: 1.3rem;
+        color: black;
+        padding: .6em;
+    }
+
+    figcaption span {
+        background-color: #d1d3d4;
+        font-size: 2rem;
+        color: black;
+        padding: .2em;
+    }
+
+    figure a {
+        margin: 0 auto;
+        text-decoration: none;
+        display: block;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+    }
+}
