@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 #wrapper {
@@ -145,6 +146,17 @@ nav ul li {
     100% {opacity: 1;}
 }
 
+.artworkhero {
+    height: 80vh;
+    width: 100%;
+    background-image: url(images/artworkhero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
 .about-container {
     display: flex;
     flex-wrap: wrap;
@@ -258,6 +270,75 @@ figure a {
     text-align: left;
 }
 
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/*
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.9%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*/
 
 footer {
     background-color: #262262;
@@ -296,12 +377,42 @@ footer {
         width: 100%;
     }
 
-    /*.pic {
+    .aboutmehero {
+        height: 80vh;
+        width: 100%;
+        /*background-image: url(images/happyfamily.jpg);*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+        grid-row: 2 / 4 !important;
+        grid-column: 1 / 5 !important;
+        height: auto !important;
+        width: 100% !important;
+        /*opacity: 1 !important;
+        animation: none !important;*/
+    }
+
+    .pic {
+        position: static;
+        height: auto;
+        width: 100%;
+        -webkit-animation-name: none;
+        -webkit-animation-iteration-count: none;
+        -webkit-animation-duration: none;
+        animation-name: none;
+        animation-iteration-count: none;
+        animation-duration: none;
+        object-fit: cover;
+    }
+
+    .artworkhero {
         grid-row: 2 / 4;
         grid-column: 1 / 5;
         height: auto;
         width: 100%;
-    }*/
+    }
 
     /* This solved the footer problem that was caused by setting a specific height for the main element in the general styles above */
     main {
@@ -339,6 +450,14 @@ footer {
     }
 
     .homehero {
+        display: none;
+    }
+
+    .aboutmehero {
+        display: none;
+    }
+
+    .artworkhero {
         display: none;
     }
 
