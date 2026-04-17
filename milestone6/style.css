@@ -92,7 +92,7 @@ nav ul li {
 }
 
 .pic {
-    position:absolute;
+    position: absolute;
     height: 80vh;
     width: 100%;
     -webkit-animation-name: fade;
@@ -132,24 +132,75 @@ nav ul li {
 }
 
 @-webkit-keyframes fade {
-    0% {opacity: 1;}
-    20% {opacity: 1;}
-    25% {opacity: 0;}
-    95% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
 @keyframes fade {
-    0% {opacity: 1;}
-    20% {opacity: 1;}
-    25% {opacity: 0;}
-    95% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .artworkhero {
     height: 80vh;
     width: 100%;
     background-image: url(images/artworkhero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
+.contacthero {
+    height: 80vh;
+    width: 100%;
+    background-image: url(images/contacthero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
+.resumehero {
+    height: 80vh;
+    width: 100%;
+    background-image: url(images/resumehero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -271,28 +322,31 @@ figure a {
 }
 
 .header {
-  text-align: center;
-  padding: 32px;
+    text-align: center;
+    padding: 32px;
 }
 
 .row {
-  display: -ms-flexbox; /* IE 10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE 10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
 /* Create two equal columns that sits next to each other */
 .column {
-  -ms-flex: 50%; /* IE 10 */
-  flex: 50%;
-  padding: 0 4px;
+    -ms-flex: 50%;
+    /* IE 10 */
+    flex: 50%;
+    padding: 0 4px;
 }
 
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
+    margin-top: 8px;
+    vertical-align: middle;
 }
 
 /*
@@ -339,6 +393,66 @@ div.desc {
   clear: both;
 }
 */
+
+form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 200px 1fr;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+input,
+textarea {
+    font-size: 1rem;
+    padding: 10px;
+    color: #262262;
+    background-color: #fafafa;
+    border: 2px solid #f498c0;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #262262;
+    background-color: #f498c0;
+}
+
+/*
+input,
+textarea {
+    font-size: 1rem;
+    padding: 10px;
+    color: #666666;
+    background-color: #fafafa;
+    border: none;
+    outline: none;
+}
+
+input :focus,
+textarea :focus {
+    border: 2px solid #262262;
+    outline: 2px solid #262262;
+    border-color: #262262;
+    background-color: #f0f0f0;
+}
+*/
+label {
+    padding: 10px;
+    text-align: right;
+}
+
+#mySubmit {
+    grid-column: 2 / 3;
+    width: 10rem;
+}
+
+.requiredp {
+    text-align: center;
+    padding: 1rem 0em;
+    font-size: 1.4rem;
+    color: black;
+}
 
 footer {
     background-color: #262262;
@@ -414,6 +528,20 @@ footer {
         width: 100%;
     }
 
+    .contacthero {
+        grid-row: 2 / 4;
+        grid-column: 1 / 5;
+        height: auto;
+        width: 100%;
+    }
+
+    .resumehero {
+        grid-row: 2 / 4;
+        grid-column: 1 / 5;
+        height: auto;
+        width: 100%;
+    }
+
     /* This solved the footer problem that was caused by setting a specific height for the main element in the general styles above */
     main {
         height: auto;
@@ -449,21 +577,13 @@ footer {
         grid-column: 1 / -1;
     }
 
-    .homehero {
+    .homehero,
+    .aboutmehero,
+    .artworkhero,
+    .contacthero,
+    .resumehero {
         display: none;
     }
-
-    .aboutmehero {
-        display: none;
-    }
-
-    .artworkhero {
-        display: none;
-    }
-
-    /*.pic {
-        display: none;
-    }*/
 }
 
 @media only screen and (max-width: 480px) {
@@ -526,5 +646,13 @@ footer {
         display: block;
         font-family: 'Times New Roman', Times, serif;
         text-align: left;
+    }
+
+    form {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        width: 100%;
     }
 }
