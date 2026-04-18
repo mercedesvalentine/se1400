@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 
+/*
 html,
 body {
     height: 100%;
-}
+}*/
 
 #wrapper {
     display: grid;
@@ -235,7 +236,6 @@ nav ul li {
 }
 
 main {
-    /* height: 100%; */
     height: auto;
     grid-row: 4 / 5;
     grid-column: 2 / -2;
