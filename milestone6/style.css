@@ -454,6 +454,11 @@ label {
     color: black;
 }
 
+.reslink a {
+    text-decoration: none;
+    color: #262262;
+}
+
 footer {
     background-color: #262262;
     grid-row: 5 / 6;
