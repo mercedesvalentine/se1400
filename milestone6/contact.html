@@ -32,7 +32,7 @@
             <hr>
             <p class="requiredp">Required information is marked with an asterisk (*).</p>
             <div class="contact-container">
-                <form action="https://api.web3forms.com/submit" method="POST">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
                     <input type="hidden" name="access_key" value="b1dfc139-cb75-4bb4-97b8-921852a95a43">
                     <label for="myFName">* First Name:</label><input type="text" name="myFName" id="myFName" required>
                     <label for="myLName">* Last Name:</label><input type="text" name="myLName" id="myLName" required>
@@ -51,6 +51,11 @@
             <p>Copyright &copy; 2026 mercedesvalentineartistry</p>
         </footer>
     </div>
+    <script>
+        window.addEventListener("pageshow", function () {
+            document.getElementById("contact-form").reset();
+        });
+    </script>
 </body>
 
 </html>
