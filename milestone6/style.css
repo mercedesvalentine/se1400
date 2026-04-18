@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 #wrapper {
     display: grid;
     grid-auto-rows: minmax(0, auto);
@@ -231,6 +241,7 @@ main {
     height: 100%;
     grid-row: 4 / 5;
     grid-column: 2 / -2;
+    flex: 1;
 }
 
 main h2 {
