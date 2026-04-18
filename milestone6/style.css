@@ -8,6 +8,7 @@
     display: grid;
     grid-auto-rows: minmax(0, auto);
     grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 200px)) minmax(0px, 1fr);
+    background: linear-gradient(#f498c0, #ffffff);
 }
 
 header {
@@ -79,14 +80,6 @@ nav ul li {
 
 .aboutmehero {
     height: 80vh;
-    /*width: 100%;*/
-    /* display: block; */
-    /* margin: 0 auto; */
-    /*below is my stuff*/
-    /*background-image: url(images/happyfamily.jpg);*/
-    /*background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;*/
     grid-row: 3 / 4;
     grid-column: 1 / -1;
 }
@@ -173,6 +166,11 @@ nav ul li {
     100% {
         opacity: 1;
     }
+}
+
+.about-container p a {
+    text-decoration: none;
+    color: #ec008c;
 }
 
 .artworkhero {
@@ -328,18 +326,14 @@ figure a {
 
 .row {
     display: -ms-flexbox;
-    /* IE 10 */
     display: flex;
     -ms-flex-wrap: wrap;
-    /* IE 10 */
     flex-wrap: wrap;
     padding: 0 4px;
 }
 
-/* Create two equal columns that sits next to each other */
 .column {
     -ms-flex: 50%;
-    /* IE 10 */
     flex: 50%;
     padding: 0 4px;
 }
@@ -349,57 +343,20 @@ figure a {
     vertical-align: middle;
 }
 
-/*
-div.gallery {
-  border: 1px solid #ccc;
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.9%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-*/
 
 form {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 200px 1fr;
-    gap: 0.75rem;
+    gap: .75rem;
     width: 100%;
+    font-size: 1.2rem;
+    padding-right: 3rem;
 }
 
 input,
@@ -410,33 +367,26 @@ textarea {
     background-color: #fafafa;
     border: 2px solid #f498c0;
     outline: none;
+    border-radius: 50px;
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+button:focus {
     border-color: #262262;
     background-color: #f498c0;
 }
 
-/*
-input,
-textarea {
+button {
     font-size: 1rem;
     padding: 10px;
-    color: #666666;
+    color: #ffffff;
     background-color: #fafafa;
-    border: none;
+    border: 2px solid #f498c0;
     outline: none;
+    border-radius: 50px;
 }
 
-input :focus,
-textarea :focus {
-    border: 2px solid #262262;
-    outline: 2px solid #262262;
-    border-color: #262262;
-    background-color: #f0f0f0;
-}
-*/
 label {
     padding: 10px;
     text-align: right;
@@ -445,6 +395,15 @@ label {
 #mySubmit {
     grid-column: 2 / 3;
     width: 10rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 30px;
+    background: linear-gradient(#ec008c, #f498c0)
+}
+
+.submit-arrow {
+    font-size: 1.5rem;
 }
 
 .requiredp {
@@ -454,9 +413,48 @@ label {
     color: black;
 }
 
+.contactimg img {
+    width: 300px;
+    padding-left: 20px;
+}
+
+.reslink {
+    padding-top: 4rem;
+}
+
 .reslink a {
     text-decoration: none;
     color: #262262;
+}
+
+.resume-info p {
+    text-align: left;
+    margin-left: 0px;
+    width: auto;
+    padding: 0;
+}
+
+.resume-info h3 {
+    text-align: left;
+    margin-left: 0px;
+    width: auto;
+    font-size: 2.3rem;
+    padding: 1rem 0;
+}
+
+.resume-info h4 {
+    text-align: left;
+    margin-left: 0px;
+    width: auto;
+    font-size: 1.5rem;
+    text-indent: 1.2rem;
+}
+
+.resume-info ul li {
+    text-align: left;
+    margin-left: 5rem;
+    width: auto;
+    font-size: 1.4rem;
 }
 
 footer {
@@ -499,7 +497,6 @@ footer {
     .aboutmehero {
         height: 80vh;
         width: 100%;
-        /*background-image: url(images/happyfamily.jpg);*/
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -509,8 +506,6 @@ footer {
         grid-column: 1 / 5 !important;
         height: auto !important;
         width: 100% !important;
-        /*opacity: 1 !important;
-        animation: none !important;*/
     }
 
     .pic {
@@ -556,6 +551,10 @@ footer {
     hr {
         width: 95%
     }
+
+    .resume-info {
+        margin: 0 3rem;
+    }
 }
 
 @media only screen and (max-width: 925px) {
@@ -587,6 +586,10 @@ footer {
     .artworkhero,
     .contacthero,
     .resumehero {
+        display: none;
+    }
+
+    .contactimg {
         display: none;
     }
 }
