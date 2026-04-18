@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
-
 #wrapper {
     display: grid;
     grid-auto-rows: minmax(0, auto);
