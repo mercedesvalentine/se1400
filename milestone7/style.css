@@ -1,0 +1,677 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    display: grid;
+    grid-auto-rows: minmax(0, auto);
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 200px)) minmax(0px, 1fr);
+    background: linear-gradient(#f498c0, #ffffff);
+    min-height: 100vh;
+}
+
+header {
+    /*height: 12vh;*/
+    height: 120px;
+    background-color: #262262;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    background-image: url(images/mywebsitelogo.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: .5em;
+    background-origin: content-box;
+    margin: 0;
+    /*background-size: 17vh;*/
+    background-size: 175px;
+    display: flex;
+    align-items: center;
+}
+
+.sitename {
+    width: 80%;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    /*height: 5vh;*/
+    height: 45px;
+    background-color: #d1d3d4;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+}
+
+nav a {
+    font-size: 1.6rem;
+    padding: .5rem 0em;
+    display: block;
+    text-align: center;
+    color: #262262;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #262262;
+    color: #ec008c;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    margin: 0 200px;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+.homehero {
+    /*height: 80vh;*/
+    height: 830px;
+    width: 100%;
+    background-image: url(images/herowebsitepicture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
+.aboutmehero {
+    /*height: 80vh;*/
+    height: 830px;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
+.pic {
+    position: absolute;
+    /*height: 80vh;*/
+    height: 830px;
+    width: 100%;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#happyfamily {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    background-image: url(images/happyfamily.jpg);
+}
+
+#happyfamily2 {
+    -webkit-animation-delay: -3s;
+    animation-delay: -3s;
+    background-image: url(images/happyfamily2.jpg);
+}
+
+#happyfamily3 {
+    object-position: 10% 0px;
+    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
+    background-image: url(images/happyfamily3.jpg);
+}
+
+#happyfamily4 {
+    -webkit-animation-delay: -9s;
+    animation-delay: -9s;
+    background-image: url(images/happyfamily4.jpg);
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.about-container p a {
+    text-decoration: none;
+    color: #ec008c;
+}
+
+.artworkhero {
+    /*height: 80vh;*/
+    height: 830px;
+    width: 100%;
+    background-image: url(images/artworkhero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
+.contacthero {
+    /*height: 80vh;*/
+    height: 830px;
+    width: 100%;
+    background-image: url(images/contacthero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
+.resumehero {
+    /*height: 80vh;*/
+    height: 830px;
+    width: 100%;
+    background-image: url(images/resumehero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spotlight {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.portrait {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+main {
+    height: auto;
+    grid-row: 4 / 5;
+    grid-column: 2 / -2;
+}
+
+main h2 {
+    padding: 1rem 0em;
+    font-size: 350%;
+    color: black;
+    text-align: center;
+}
+
+main p {
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem 0em;
+    font-size: 1.4rem;
+    color: black;
+    text-align: center;
+    text-align: left;
+    text-indent: 2.5em;
+}
+
+hr {
+    margin: 0 auto;
+    padding: 1rem 0em;
+    border: none;
+    border-top: 2px solid #262262;
+}
+
+.clear {
+    clear: both;
+}
+
+.artwork1,
+.artwork2,
+.artwork3,
+.artwork4 {
+    float: left;
+    width: 50%;
+    padding: 1rem 0em;
+    height: 100%;
+}
+
+.artwork1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.artwork2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.artwork3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.artwork4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+figure {
+    width: 450px;
+    margin: 0 auto;
+}
+
+figcaption {
+    background-color: #d1d3d4;
+    font-size: 1.3rem;
+    color: black;
+    padding: .6em;
+}
+
+figcaption span {
+    background-color: #d1d3d4;
+    font-size: 2rem;
+    color: black;
+    padding: .2em;
+}
+
+figure a {
+    margin: 0 auto;
+    text-decoration: none;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    -ms-flex: 50%;
+    flex: 50%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 200px 1fr;
+    gap: .75rem;
+    width: 100%;
+    font-size: 1.2rem;
+    padding-right: 3rem;
+}
+
+input,
+textarea {
+    font-size: 1rem;
+    padding: 10px;
+    color: #262262;
+    background-color: #fafafa;
+    border: 2px solid #f498c0;
+    outline: none;
+    border-radius: 50px;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    border-color: #262262;
+    background-color: #f498c0;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #fafafa;
+    border: 2px solid #f498c0;
+    outline: none;
+    border-radius: 50px;
+}
+
+label {
+    padding: 10px;
+    text-align: right;
+}
+
+#mySubmit {
+    grid-column: 2 / 3;
+    width: 10rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 30px;
+    background: linear-gradient(#ec008c, #f498c0)
+}
+
+.submit-arrow {
+    font-size: 1.5rem;
+}
+
+.requiredp {
+    text-align: center;
+    padding: 1rem 0em;
+    font-size: 1.4rem;
+    color: black;
+}
+
+.contactimg img {
+    width: 300px;
+    padding-left: 20px;
+}
+
+.reslink {
+    padding-top: 4rem;
+}
+
+.reslink a {
+    text-decoration: none;
+    color: #262262;
+}
+
+.resume-info p {
+    text-align: left;
+    margin-left: 0px;
+    width: auto;
+    padding: 0;
+}
+
+.resume-info h3 {
+    text-align: left;
+    margin-left: 0px;
+    width: auto;
+    font-size: 2.3rem;
+    padding: 1rem 0;
+}
+
+.resume-info h4 {
+    text-align: left;
+    margin-left: 0px;
+    width: auto;
+    font-size: 1.5rem;
+    text-indent: 1.2rem;
+}
+
+.resume-info ul li {
+    text-align: left;
+    margin-left: 5rem;
+    width: auto;
+    font-size: 1.4rem;
+}
+
+footer {
+    background-color: #262262;
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 4rem 0rem 1rem 0rem;
+    color: #f498c0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1rem
+}
+
+@media only screen and (max-width: 1585px) {
+    nav {
+        grid-column: 5 / -1;
+        grid-row: 2 / 4;
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    nav ul {
+        margin: 0;
+        flex-flow: column nowrap;
+    }
+
+    .homehero {
+        grid-row: 2 / 4;
+        grid-column: 1 / 5;
+        height: auto;
+        width: 100%;
+    }
+
+    .aboutmehero {
+        height: 80vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+        grid-row: 2 / 4 !important;
+        grid-column: 1 / 5 !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+
+    .pic {
+        position: static;
+        height: auto;
+        width: 100%;
+        -webkit-animation-name: none;
+        -webkit-animation-iteration-count: none;
+        -webkit-animation-duration: none;
+        animation-name: none;
+        animation-iteration-count: none;
+        animation-duration: none;
+        object-fit: cover;
+    }
+
+    .artworkhero {
+        grid-row: 2 / 4;
+        grid-column: 1 / 5;
+        height: auto;
+        width: 100%;
+    }
+
+    .contacthero {
+        grid-row: 2 / 4;
+        grid-column: 1 / 5;
+        height: auto;
+        width: 100%;
+    }
+
+    .resumehero {
+        grid-row: 2 / 4;
+        grid-column: 1 / 5;
+        height: auto;
+        width: 100%;
+    }
+
+    /* This solved the footer problem that was caused by setting a specific height for the main element in the general styles above */
+    main {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    hr {
+        width: 95%
+    }
+
+    .resume-info {
+        margin: 0 3rem;
+    }
+}
+
+@media only screen and (max-width: 925px) {
+
+    .artwork1,
+    .artwork2,
+    .artwork3,
+    .artwork4 {
+        width: 100%;
+        padding: 1rem 0em;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    #wrapper header {
+        background-position: center;
+    }
+
+    #wrapper header .sitename {
+        display: none;
+    }
+
+    nav {
+        grid-column: 1 / -1;
+    }
+
+    .homehero,
+    .aboutmehero,
+    .artworkhero,
+    .contacthero,
+    .resumehero {
+        display: none;
+    }
+
+    .contactimg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .clear {
+        clear: both;
+    }
+
+    .artwork1,
+    .artwork2,
+    .artwork3,
+    .artwork4 {
+        float: left;
+        width: 100%;
+        padding: 1rem 0em;
+        height: 100%;
+    }
+
+    .artwork1 {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .artwork2 {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .artwork3 {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .artwork4 {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    figure {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    figcaption {
+        background-color: #d1d3d4;
+        font-size: 1.3rem;
+        color: black;
+        padding: .6em;
+    }
+
+    figcaption span {
+        background-color: #d1d3d4;
+        font-size: 2rem;
+        color: black;
+        padding: .2em;
+    }
+
+    figure a {
+        margin: 0 auto;
+        text-decoration: none;
+        display: block;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: left;
+    }
+
+    form {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        width: 100%;
+    }
+}

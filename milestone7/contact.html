@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mercedes Valentine's Art Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="images/headerh1picture.jpg" alt="Mercedes Valentine's Art Portfolio" class="sitename">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="artwork.html">Artwork</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+        <div class="contacthero"></div>
+        <main>
+            <h2>Want to Get in Touch?</h2>
+            <p>As an artist I would love to hear from you! It makes my day when I receive messages from people who
+                appreciate my work, and I also love when I am critiqued so that I can become better. Whether you have
+                questions about my art, want to commission a piece, or just want to say hello, feel free to reach out.
+            </p>
+            <hr>
+            <p class="requiredp">Required information is marked with an asterisk (*).</p>
+            <div class="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                    <input type="hidden" name="access_key" value="b1dfc139-cb75-4bb4-97b8-921852a95a43">
+                    <label for="myFName">* First Name:</label><input type="text" name="myFName" id="myFName" required>
+                    <label for="myLName">* Last Name:</label><input type="text" name="myLName" id="myLName" required>
+                    <label for="myEmail">* Email:</label><input type="email" name="myEmail" id="myEmail" required>
+                    <label for="myPhone">Phone:</label><input type="tel" name="myPhone" id="myPhone">
+                    <label for="myComments">* Comments:</label><textarea name="myComments" id="myComments" cols="20"
+                        rows="2" required></textarea>
+                    <button type="submit" id="mySubmit">Submit &nbsp;<span class="submit-arrow">&#10140;</span></button>
+                </form>
+                <div class="contactimg">
+                    <img src="images/contactme.png" alt="ContactMe Img">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2026 mercedesvalentineartistry</p>
+        </footer>
+    </div>
+    <script>
+        window.addEventListener("pageshow", function () {
+            document.getElementById("contact-form").reset();
+        });
+    </script>
+</body>
+
+</html>
