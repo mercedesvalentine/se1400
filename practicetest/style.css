@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #123;
+    color: #555;
+    margin: 0;
+    font-family: 'Quicksand', arial, sans-serif;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+nav {
+    grid-column: -3 / -2;
+    grid-row: 1 / 2;
+    background-color: #93BFA8;
+}
+
+main {
+    grid-column: 2 / -3;
+    grid-row: 1 / 2;
+    background-color: #fff;
+    padding: 20px;
+}
+
+footer {
+    grid-column: 2 / -2;
+    grid-row: 2 / 3;
+    background-color: rgb(34, 58, 81);
+    color: #c2c2c2;
+    font-size: 1rem;
+    padding: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+nav ul {
+
+}
+
+nav ul li a {
+
+}
+
+nav ul li a:active, nav ul li a:hover {
+    background-color: #fff;
+    color:;
+}
+
+p {
+    line-height: 1.25rem;
+}
+
+a {
+    color: #585b59;
+}
+
+h3 {
+    border-bottom: 2px #555 solid;
+    color: #555;
+}
+
+.side {
+    width: 300px;
+    padding: 20px;
+    font-style: italic;
+    font-size: .75rem;
+    float: right;
+}
+
+.responsive {
+    width: 100%;
+}
+
+.video {
+    float: left;
+    width: 320px;
+}
+
+@media screen and (max-width: 960px) {
+    nav
+}
+
+/*https://rexfrisbey.github.io/se1400/*/
