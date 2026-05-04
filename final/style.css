@@ -1,0 +1,166 @@
+/* Structual Elements Go Here */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #edeeef;
+    color: #555;
+    margin: 0;
+    font-family: 'Lato', arial, sans-serif;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) repeat(6, minmax(0, 175px)) minmax(0, 1fr);
+}
+
+nav {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: #edeeef;
+}
+
+main {
+    grid-column: 3 / -2;
+    grid-row: 1 / 2;
+    background-color: #fff;
+    padding: 20px;
+}
+
+footer {
+    grid-column: 3 / -2;
+    background-color: #2d5ba6;
+    color: #fff;
+    font-size: 0.5rem;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Elements Go Here */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    list-style-type: none;
+
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 10px;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+    background-color: #fff;
+    color: #d53631;
+}
+
+/* Styling Elements Go Here */
+p {
+    line-height: 1.25rem;
+}
+.taken {
+    color:#cb423b;
+    text-decoration: underline;
+}
+
+a {
+    color: #d53631;
+}
+
+h2 {
+    border-bottom: 2px solid #555;
+}
+
+.picture, .picture2, .picture3 {
+    width: 300px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    font-style: italic;
+    font-size: .75rem;
+    float: right;
+    text-align: center;
+}
+
+.logo, .hero, video {
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Media Query of 960 and less goes here */
+@media screen and (max-width: 960px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        float: left;
+        max-width: 150px;
+    }
+
+    .hero, .picture, .picture2, .picture3, video {
+        width: 100%;
+        padding: 0px;
+        float: none;
+    }
+
+    nav {
+        grid-column: 2 / -2;
+        grid-row: 1 / 2;
+        text-align: center;
+        display: inline-block;
+    }
+
+    main {
+        grid-column: 2 / -2;
+        grid-row: 2 / 3;
+    }
+
+    footer {
+        grid-column: 2 / -2;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
